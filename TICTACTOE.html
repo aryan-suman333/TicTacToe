@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" href="TICTACTOE.css">
+</head>
+<body>
+    <header class="center">
+        <button id="dark" onclick="dc()"><img id="imgl" src="images/bright.png" alt=""></button>
+        TIC TAC TOE
+        <button id="vol"><img id="imgr" src="images/volumeon.png" alt=""></button>
+    </header>
+    <div id="i2">PLAYER 1 = O, PLAYER 2 = X</div>
+    <div id="board">
+        <span class="letters" id="letter1">1</span>
+        <span class="letters" id="letter2">2</span>
+        <span class="letters" id="letter3">3</span>
+        <span class="letters" id="letter4">4</span>
+        <span class="letters" id="letter5">5</span>
+        <span class="letters" id="letter6">6</span>
+        <span class="letters" id="letter7">7</span>
+        <span class="letters" id="letter8">8</span>
+        <span class="letters" id="letter9">9</span>
+    </div>
+    <div id="i1">
+        <span id ="p1">PLAYER 1 MOVE!</span><br>
+        <span id ="p2">ENTER A NUMBER_<input type="number" name="number" id="num" min="1" max="9">
+        <button id="btn">ENTER</button></span>
+    </div>
+    <audio id="audio1" src="audio/EnterSound.wav"></audio>
+    <audio id="audio2" src="audio/WinSound.wav"></audio>
+    <script src="TICTACTOE.js"></script>
+</body>
+</html>
