@@ -34,8 +34,6 @@ header{
     height: 7vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    text-align: center;
 }
 #vol{
     background-color: #FFAD05;
@@ -43,13 +41,11 @@ header{
     border-radius: 0.5vh;
     cursor: pointer;
     width: 6vh;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 38.6vw;
-    top: 0.7vh;
+    height: 5.5vh;
+    margin: auto 10px auto 0px;
+}
+#htext{
+    margin: auto;
 }
 #dark{
     background-color: #FFAD05;
@@ -58,19 +54,14 @@ header{
     cursor: pointer;
     width: 6vh;
     height: 5.5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    right: 38.6vw;
-    top: 0.7vh;
+    margin: auto 0px auto 10px;
 }
 #vol img{
-    width: 2vw;
+    width: 4vh;
     height: 4.1vh;
 }
 #dark img{
-    width: 2vw;
+    width: 4vh;
     height: 4.1vh;
 }
 #board{
@@ -79,7 +70,6 @@ header{
     grid-column-gap: 0.7vw;
     grid-row-gap: 0.7vw;
     margin: 5.4vh auto 5.4vh auto;
-    padding: 0;
     font-family: 'adigiana_2regular';
     background-color: black;
     width: 29.3vw;
@@ -147,6 +137,7 @@ header{
   -webkit-appearance: none; 
 }
 #btn{
+    cursor: pointer;
     background-color: #FFAD05;
     border-radius: 0.5vh;
     font-family: 'fatternregular';
@@ -159,12 +150,13 @@ header{
 audio{
     display: none;
 }
-@media screen and (min-width: 600px) and (max-width: 1700px) {
+@media screen and (min-width: 622px) and (max-width: 1700px) {
     #board{
         width: 500px;
         height: 425px;
         grid-column-gap: 11px;
         grid-row-gap: 11px;
+        border-radius: 15px;
     }
     #letter1{
         border-radius: 15px 0px 10px 0px;
@@ -197,12 +189,13 @@ audio{
         font-size: 110px;
     }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 622px) and (min-width: 500px){
     #board{
         width: 400px;
         height: 340px;
         grid-column-gap: 8px;
         grid-row-gap: 8px;
+        border-radius: 20px;
     }
     #letter1{
         border-radius: 20px 0px 12px 0px;
@@ -235,9 +228,59 @@ audio{
         font-size: 90px;
     }
     #i2{
-        font-size: 50px;
+        font-size: 55px;
     }
     #i1{
         font-size: 40px;
+    }
+}
+@media screen and (max-width: 500px){
+    #htext{
+        font-size: 5.5vh;
+        position: relative;
+        top: 0.5vh;
+    }
+    #board{
+        width: 300px;
+        height: 240px;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        border-radius: 12px;
+    }
+    #letter1{
+        border-radius: 12px 0px 7px 0px;
+    }
+    #letter2{
+        border-radius: 0px 0px 7px 7px;
+    }
+    #letter3{
+        border-radius: 0px 12px 0px 7px;
+    }
+    #letter4{
+        border-radius: 0px 7px 7px 0px;
+    }
+    #letter5{
+        border-radius: 7px 7px 7px 7px;
+    }
+    #letter6{
+        border-radius: 7px 0px 0px 7px;
+    }
+    #letter7{
+        border-radius: 0px 7px 0px 12px;
+    }
+    #letter8{
+        border-radius: 7px 7px 0px 0px;
+    }
+    #letter9{
+        border-radius: 7px 0px 12px 0px;
+    }
+    .letters{
+        font-size: 60px;
+    }
+    #i2{
+        font-size: 40px;
+    }
+    #i1{
+        font-size: 35px;
     }
 }
