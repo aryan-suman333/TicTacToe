@@ -6,8 +6,6 @@ if(localStorage.getItem("theme") == "light"){
 	document.getElementById("btn").style.backgroundColor = "white";
 	document.getElementById("num").style.backgroundColor = "white";
 	document.getElementById("num").style.color = "black";
-	document.getElementById("num").focus();
-	document.getElementById("num").select();
 }
 let sound = "on"
 if(localStorage.getItem("volum") == "off"){
@@ -42,7 +40,7 @@ dark.addEventListener('mouseover', function(){
 dark.addEventListener('mouseout', function(){
 	dark.style.filter = "brightness(1)"
 });
-function dc(){
+function darkclick(){
 	if(imgl.src.match("images/bright.png")){
 		imgl.src = "images/dark.png";
 		checkboard();
@@ -237,17 +235,8 @@ function checkboard(){
 }
 
 function playagain(){
-	document.getElementById("p2").innerHTML = '<button id="btn2" onmouseover="bmo()" onmouseout="bmou()" onclick="history.go(0);">PLAY AGAIN!</button>'
-	if(imgl.src.match("images/bright.png")){
-		document.getElementById("btn2").style.color = "#FFAD05";
-		document.getElementById("btn2").style.backgroundColor = "white";
-		document.getElementById("btn2").style.border = "0.5vh solid #FFAD05";
-	}
-	else{
-		document.getElementById("btn2").style.color = "black";
-		document.getElementById("btn2").style.backgroundColor = "#FFAD05";
-		document.getElementById("btn2").style.border = "0.5vh solid black";
-	}
+	document.getElementById("p2").innerHTML = '<button id="btn2" onmouseover="bmo()" onmouseout="bmout()" onclick="history.go(0);">PLAY AGAIN!</button>'
+	checkbutton2();
 	document.getElementById("btn2").style.height = "6vh";
 	document.getElementById("btn2").style.width = "35vh";
 	document.getElementById("btn2").style.fontFamily = "fatternregular";
@@ -259,7 +248,7 @@ function playagain(){
 function bmo(){
 	document.getElementById("btn2").style.filter = "brightness(0.5)"
 }
-function bmou(){
+function bmout(){
 	document.getElementById("btn2").style.filter = "brightness(1)"
 }
 
