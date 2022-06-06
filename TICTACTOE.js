@@ -14,12 +14,6 @@ if(localStorage.getItem("volum") == "off"){
 }
 
 let vol = document.getElementById("vol")
-// vol.addEventListener('mouseover', function(){
-// 	vol.style.filter = "brightness(0.5)"
-// });
-// vol.addEventListener('mouseout', function(){
-// 	vol.style.filter = "brightness(1)"
-// });
 vol.addEventListener('click', function(){
 	if(imgr.src.match("images/volumeon.png")){
 		imgr.src = "images/volumeoff.png";
@@ -33,13 +27,6 @@ vol.addEventListener('click', function(){
 	}
 });
 
-let dark = document.getElementById("dark")
-// dark.addEventListener('mouseover', function(){
-// 	dark.style.filter = "brightness(0.5)"
-// });
-// dark.addEventListener('mouseout', function(){
-// 	dark.style.filter = "brightness(1)"
-// });
 function darkclick(){
 	if(imgl.src.match("images/bright.png")){
 		imgl.src = "images/dark.png";
@@ -72,13 +59,6 @@ function darkclick(){
 }
 
 let btn = document.getElementById("btn")
-// btn.addEventListener('mouseover', function(){
-// 	btn.style.filter = "brightness(0.5)"
-// });
-// btn.addEventListener('mouseout', function(){
-// 	btn.style.filter = "brightness(1)"
-// });
-
 let moves = 0,player = 1;
 let num = document.getElementById("num");
 num.focus();
@@ -101,141 +81,44 @@ letter7 = document.getElementById('letter7')
 letter8 = document.getElementById('letter8')
 letter9 = document.getElementById('letter9')
 
+function lettersColorChange(l1,l2,l3){
+	if(imgl.src.match("images/bright.png")){
+		l1.style.backgroundColor = "white"
+		l2.style.backgroundColor = "white"
+		l3.style.backgroundColor = "white"
+	}
+	else{
+		l1.style.backgroundColor = "rgb(75, 75, 75)"
+		l2.style.backgroundColor = "rgb(75, 75, 75)"
+		l3.style.backgroundColor = "rgb(75, 75, 75)"
+		l1.style.color = "#FFAD05"
+		l2.style.color = "#FFAD05"
+		l3.style.color = "#FFAD05"
+	}
+}
 function checkboard(){
-	if(letter1.innerHTML == letter2.innerHTML && letter2.innerHTML == letter3.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter1.style.backgroundColor = "white"
-			letter2.style.backgroundColor = "white"
-			letter3.style.backgroundColor = "white"
-		}
-		else{
-			letter1.style.backgroundColor = "rgb(75, 75, 75)"
-			letter2.style.backgroundColor = "rgb(75, 75, 75)"
-			letter3.style.backgroundColor = "rgb(75, 75, 75)"
-			letter1.style.color = "#FFAD05"
-			letter2.style.color = "#FFAD05"
-			letter3.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	else if(letter4.innerHTML == letter5.innerHTML && letter5.innerHTML == letter6.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter4.style.backgroundColor = "white"
-			letter5.style.backgroundColor = "white"
-			letter6.style.backgroundColor = "white"
-		}
-		else{
-			letter4.style.backgroundColor = "rgb(75, 75, 75)"
-			letter5.style.backgroundColor = "rgb(75, 75, 75)"
-			letter6.style.backgroundColor = "rgb(75, 75, 75)"
-			letter4.style.color = "#FFAD05"
-			letter5.style.color = "#FFAD05"
-			letter6.style.color = "#FFAD05"
-		}
-		return true;
-	}
-		
-	else if(letter7.innerHTML == letter8.innerHTML && letter8.innerHTML == letter9.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter7.style.backgroundColor = "white"
-			letter8.style.backgroundColor = "white"
-			letter9.style.backgroundColor = "white"
-		}
-		else{
-			letter7.style.backgroundColor = "rgb(75, 75, 75)"
-			letter8.style.backgroundColor = "rgb(75, 75, 75)"
-			letter9.style.backgroundColor = "rgb(75, 75, 75)"
-			letter7.style.color = "#FFAD05"
-			letter8.style.color = "#FFAD05"
-			letter9.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	else if(letter1.innerHTML == letter4.innerHTML && letter4.innerHTML == letter7.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter1.style.backgroundColor = "white"
-			letter4.style.backgroundColor = "white"
-			letter7.style.backgroundColor = "white"
-		}
-		else{
-			letter1.style.backgroundColor = "rgb(75, 75, 75)"
-			letter4.style.backgroundColor = "rgb(75, 75, 75)"
-			letter7.style.backgroundColor = "rgb(75, 75, 75)"
-			letter1.style.color = "#FFAD05"
-			letter4.style.color = "#FFAD05"
-			letter7.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	else if(letter2.innerHTML == letter5.innerHTML && letter5.innerHTML == letter8.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter2.style.backgroundColor = "white"
-			letter5.style.backgroundColor = "white"
-			letter8.style.backgroundColor = "white"
-		}
-		else{
-			letter2.style.backgroundColor = "rgb(75, 75, 75)"
-			letter5.style.backgroundColor = "rgb(75, 75, 75)"
-			letter8.style.backgroundColor = "rgb(75, 75, 75)"
-			letter2.style.color = "#FFAD05"
-			letter5.style.color = "#FFAD05"
-			letter8.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	else if(letter3.innerHTML == letter6.innerHTML && letter6.innerHTML == letter9.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter3.style.backgroundColor = "white"
-			letter6.style.backgroundColor = "white"
-			letter9.style.backgroundColor = "white"
-		}
-		else{
-			letter3.style.backgroundColor = "rgb(75, 75, 75)"
-			letter6.style.backgroundColor = "rgb(75, 75, 75)"
-			letter9.style.backgroundColor = "rgb(75, 75, 75)"
-			letter3.style.color = "#FFAD05"
-			letter6.style.color = "#FFAD05"
-			letter9.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	else if(letter1.innerHTML == letter5.innerHTML && letter5.innerHTML == letter9.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter1.style.backgroundColor = "white"
-			letter5.style.backgroundColor = "white"
-			letter9.style.backgroundColor = "white"
-		}
-		else{
-			letter1.style.backgroundColor = "rgb(75, 75, 75)"
-			letter5.style.backgroundColor = "rgb(75, 75, 75)"
-			letter9.style.backgroundColor = "rgb(75, 75, 75)"
-			letter1.style.color = "#FFAD05"
-			letter5.style.color = "#FFAD05"
-			letter9.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	else if(letter3.innerHTML == letter5.innerHTML && letter5.innerHTML == letter7.innerHTML){
-		if(imgl.src.match("images/bright.png")){
-			letter3.style.backgroundColor = "white"
-			letter5.style.backgroundColor = "white"
-			letter7.style.backgroundColor = "white"
-		}
-		else{
-			letter3.style.backgroundColor = "rgb(75, 75, 75)"
-			letter5.style.backgroundColor = "rgb(75, 75, 75)"
-			letter7.style.backgroundColor = "rgb(75, 75, 75)"
-			letter3.style.color = "#FFAD05"
-			letter5.style.color = "#FFAD05"
-			letter7.style.color = "#FFAD05"
-		}
-		return true;
-	}
-	return false;
+	if(letter1.innerHTML == letter2.innerHTML && letter2.innerHTML == letter3.innerHTML)
+		lettersColorChange(letter1,letter2,letter3);
+	else if(letter4.innerHTML == letter5.innerHTML && letter5.innerHTML == letter6.innerHTML)
+		lettersColorChange(letter4,letter5,letter6);
+	else if(letter7.innerHTML == letter8.innerHTML && letter8.innerHTML == letter9.innerHTML)
+		lettersColorChange(letter7,letter8,letter9);
+	else if(letter1.innerHTML == letter4.innerHTML && letter4.innerHTML == letter7.innerHTML)
+		lettersColorChange(letter1,letter4,letter7);
+	else if(letter2.innerHTML == letter5.innerHTML && letter5.innerHTML == letter8.innerHTML)
+		lettersColorChange(letter2,letter5,letter8);
+	else if(letter3.innerHTML == letter6.innerHTML && letter6.innerHTML == letter9.innerHTML)
+		lettersColorChange(letter3,letter6,letter9);
+	else if(letter1.innerHTML == letter5.innerHTML && letter5.innerHTML == letter9.innerHTML)
+		lettersColorChange(letter1,letter5,letter9);
+	else if(letter3.innerHTML == letter5.innerHTML && letter5.innerHTML == letter7.innerHTML)
+		lettersColorChange(letter3,letter5,letter7);
+	else return false;
+	return true;
 }
 
 function playagain(){
-	document.getElementById("p2").innerHTML = '<button id="btn2" onmouseover="bmo()" onmouseout="bmout()" onclick="history.go(0);">PLAY AGAIN!</button>'
+	document.getElementById("p2").innerHTML = '<button id="btn2" onmouseover="bmover()" onmouseout="bmout()" onclick="history.go(0);">PLAY AGAIN!</button>'
 	checkbutton2();
 	document.getElementById("btn2").style.height = "6vh";
 	document.getElementById("btn2").style.width = "35vh";
@@ -245,7 +128,7 @@ function playagain(){
 	document.getElementById("btn2").style.borderRadius = "0.5vh";
 }
 
-function bmo(){
+function bmover(){
 	document.getElementById("btn2").style.filter = "brightness(0.5)"
 }
 function bmout(){
@@ -266,6 +149,26 @@ function checkbutton2(){
 		document.getElementById("btn2").style.border = "0.5vh solid #FFAD05";
 	}
 }
+function move(l,text,ox,pwon){
+	if(l.innerHTML == text){
+		l.innerHTML = ox;
+		l.style.color = "black";
+	}
+	else{
+		moves--;
+		b = false;
+		alert("Enter another number.");
+	} 
+	if(moves >= 5){
+		if(checkboard()){
+			if(sound == "on")
+				audio2.play();
+			document.getElementById("p1").innerHTML = pwon;
+			playagain();
+			b = false;
+		}
+	}
+}
 
 let audio1 = document.getElementById("audio1");
 let audio2 = document.getElementById("audio2");
@@ -273,186 +176,25 @@ btn.addEventListener('click', function(){
 	moves++;
 	let b = true;
 	if(player == 1){
-		if(num.value == 1){
-			if(document.getElementById("letter1").innerHTML == '1'){
-				document.getElementById("letter1").innerHTML = 'O';
-				document.getElementById("letter1").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			} 
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}	
-		else if(num.value == 2){
-			if(document.getElementById("letter2").innerHTML == '2'){
-				document.getElementById("letter2").innerHTML = 'O';
-				document.getElementById("letter2").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 3){
-			if(document.getElementById("letter3").innerHTML == '3'){
-				document.getElementById("letter3").innerHTML = 'O';
-				document.getElementById("letter3").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 4){
-			if(document.getElementById("letter4").innerHTML == '4'){
-				document.getElementById("letter4").innerHTML = 'O';
-				document.getElementById("letter4").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 5){
-			if(document.getElementById("letter5").innerHTML == '5'){
-				document.getElementById("letter5").innerHTML = 'O';
-				document.getElementById("letter5").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 6){
-			if(document.getElementById("letter6").innerHTML == '6'){
-				document.getElementById("letter6").innerHTML = 'O';
-				document.getElementById("letter6").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 7){
-			if(document.getElementById("letter7").innerHTML == '7'){
-				document.getElementById("letter7").innerHTML = 'O';
-				document.getElementById("letter7").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 8){
-			if(document.getElementById("letter8").innerHTML == '8'){
-				document.getElementById("letter8").innerHTML = 'O';
-				document.getElementById("letter8").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 9){
-			if(document.getElementById("letter9").innerHTML == '9'){
-				document.getElementById("letter9").innerHTML = 'O';
-				document.getElementById("letter9").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 1 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
+		let ox = 'O',pwon = "PLAYER 1 WON!";
+		if(num.value == 1)
+			move(letter1,'1',ox,pwon);
+		else if(num.value == 2)
+			move(letter2,'2',ox,pwon);
+		else if(num.value == 3)
+			move(letter3,'3',ox,pwon);
+		else if(num.value == 4)
+			move(letter4,'4',ox,pwon);
+		else if(num.value == 5)
+			move(letter5,'5',ox,pwon);
+		else if(num.value == 6)
+			move(letter6,'6',ox,pwon);
+		else if(num.value == 7)
+			move(letter7,'7',ox,pwon);
+		else if(num.value == 8)
+			move(letter8,'8',ox,pwon);
+		else if(num.value == 9)
+			move(letter9,'9',ox,pwon);
 		else{
 			alert("Number must be between 1 and 9.");
 			b = false;
@@ -471,186 +213,25 @@ btn.addEventListener('click', function(){
 		}
 	}
 	else if(player == 2){
-		if(num.value == 1){
-			if(document.getElementById("letter1").innerHTML == '1'){
-				document.getElementById("letter1").innerHTML = 'X';
-				document.getElementById("letter1").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}	
-		else if(num.value == 2){
-			if(document.getElementById("letter2").innerHTML == '2'){
-				document.getElementById("letter2").innerHTML = 'X';
-				document.getElementById("letter2").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 3){
-			if(document.getElementById("letter3").innerHTML == '3'){
-				document.getElementById("letter3").innerHTML = 'X';
-				document.getElementById("letter3").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 4){
-			if(document.getElementById("letter4").innerHTML == '4'){
-				document.getElementById("letter4").innerHTML = 'X';
-				document.getElementById("letter4").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 5){
-			if(document.getElementById("letter5").innerHTML == '5'){
-				document.getElementById("letter5").innerHTML = 'X';
-				document.getElementById("letter5").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 6){
-			if(document.getElementById("letter6").innerHTML == '6'){
-				document.getElementById("letter6").innerHTML = 'X';
-				document.getElementById("letter6").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 7){
-			if(document.getElementById("letter7").innerHTML == '7'){
-				document.getElementById("letter7").innerHTML = 'X';
-				document.getElementById("letter7").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 8){
-			if(document.getElementById("letter8").innerHTML == '8'){
-				document.getElementById("letter8").innerHTML = 'X';
-				document.getElementById("letter8").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
-		else if(num.value == 9){
-			if(document.getElementById("letter9").innerHTML == '9'){
-				document.getElementById("letter9").innerHTML = 'X';
-				document.getElementById("letter9").style.color = "black";
-			}
-			else{
-				moves--;
-				b = false;
-				alert("Enter another number.");
-			}
-			if(moves >= 5){
-				if(checkboard()){
-					if(sound == "on")
-						audio2.play();
-					document.getElementById("p1").innerHTML = "PLAYER 2 WON!";
-					playagain();
-					b = false;
-				}
-			}
-		}
+		let ox = 'X',pwon = "PLAYER 2 WON!";
+		if(num.value == 1)
+			move(letter1,'1',ox,pwon);
+		else if(num.value == 2)
+			move(letter2,'2',ox,pwon);
+		else if(num.value == 3)
+			move(letter3,'3',ox,pwon);
+		else if(num.value == 4)
+			move(letter4,'4',ox,pwon);
+		else if(num.value == 5)
+			move(letter5,'5',ox,pwon);
+		else if(num.value == 6)
+			move(letter6,'6',ox,pwon);
+		else if(num.value == 7)
+			move(letter7,'7',ox,pwon);
+		else if(num.value == 8)
+			move(letter8,'8',ox,pwon);
+		else if(num.value == 9)
+			move(letter9,'9',ox,pwon);
 		else{
 			alert("Number must be between 1 and 9.");
 			b = false;
