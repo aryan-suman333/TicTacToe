@@ -14,12 +14,12 @@ if(localStorage.getItem("volum") == "off"){
 }
 
 let vol = document.getElementById("vol")
-vol.addEventListener('mouseover', function(){
-	vol.style.filter = "brightness(0.5)"
-});
-vol.addEventListener('mouseout', function(){
-	vol.style.filter = "brightness(1)"
-});
+// vol.addEventListener('mouseover', function(){
+// 	vol.style.filter = "brightness(0.5)"
+// });
+// vol.addEventListener('mouseout', function(){
+// 	vol.style.filter = "brightness(1)"
+// });
 vol.addEventListener('click', function(){
 	if(imgr.src.match("images/volumeon.png")){
 		imgr.src = "images/volumeoff.png";
@@ -34,12 +34,12 @@ vol.addEventListener('click', function(){
 });
 
 let dark = document.getElementById("dark")
-dark.addEventListener('mouseover', function(){
-	dark.style.filter = "brightness(0.5)"
-});
-dark.addEventListener('mouseout', function(){
-	dark.style.filter = "brightness(1)"
-});
+// dark.addEventListener('mouseover', function(){
+// 	dark.style.filter = "brightness(0.5)"
+// });
+// dark.addEventListener('mouseout', function(){
+// 	dark.style.filter = "brightness(1)"
+// });
 function darkclick(){
 	if(imgl.src.match("images/bright.png")){
 		imgl.src = "images/dark.png";
@@ -72,12 +72,12 @@ function darkclick(){
 }
 
 let btn = document.getElementById("btn")
-btn.addEventListener('mouseover', function(){
-	btn.style.filter = "brightness(0.5)"
-});
-btn.addEventListener('mouseout', function(){
-	btn.style.filter = "brightness(1)"
-});
+// btn.addEventListener('mouseover', function(){
+// 	btn.style.filter = "brightness(0.5)"
+// });
+// btn.addEventListener('mouseout', function(){
+// 	btn.style.filter = "brightness(1)"
+// });
 
 let moves = 0,player = 1;
 let num = document.getElementById("num");

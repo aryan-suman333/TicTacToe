@@ -44,6 +44,9 @@ header{
     height: 5.5vh;
     margin: auto 10px auto 0px;
 }
+#vol:hover{
+    filter: brightness(0.5);
+}
 #htext{
     margin: auto;
 }
@@ -55,6 +58,9 @@ header{
     width: 6vh;
     height: 5.5vh;
     margin: auto 0px auto 10px;
+}
+#dark:hover{
+    filter: brightness(0.5);
 }
 #vol img{
     width: 4vh;
@@ -146,6 +152,9 @@ header{
     width: 7vh;
     position: relative;
     bottom: 1vh;
+}
+#btn:hover{
+    filter: brightness(0.5);
 }
 audio{
     display: none;
