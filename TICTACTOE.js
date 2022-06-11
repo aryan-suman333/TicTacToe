@@ -149,7 +149,7 @@ function checkbutton2(){
 		document.getElementById("btn2").style.border = "0.5vh solid #FFAD05";
 	}
 }
-function move(l,text,ox,pwon){
+function move(l,text,ox,pwon,b){
 	if(l.innerHTML == text){
 		l.innerHTML = ox;
 		l.style.color = "black";
@@ -168,33 +168,34 @@ function move(l,text,ox,pwon){
 			b = false;
 		}
 	}
+	return b;
 }
 
 let audio1 = document.getElementById("audio1");
 let audio2 = document.getElementById("audio2");
 btn.addEventListener('click', function(){
 	moves++;
-	let b = true;
+	b = true;
 	if(player == 1){
 		let ox = 'O',pwon = "PLAYER 1 WON!";
 		if(num.value == 1)
-			move(letter1,'1',ox,pwon);
+			b = move(letter1,'1',ox,pwon,b);
 		else if(num.value == 2)
-			move(letter2,'2',ox,pwon);
+			b = move(letter2,'2',ox,pwon,b);
 		else if(num.value == 3)
-			move(letter3,'3',ox,pwon);
+			b = move(letter3,'3',ox,pwon,b);
 		else if(num.value == 4)
-			move(letter4,'4',ox,pwon);
+			b = move(letter4,'4',ox,pwon,b);
 		else if(num.value == 5)
-			move(letter5,'5',ox,pwon);
+			b = move(letter5,'5',ox,pwon,b);
 		else if(num.value == 6)
-			move(letter6,'6',ox,pwon);
+			b = move(letter6,'6',ox,pwon,b);
 		else if(num.value == 7)
-			move(letter7,'7',ox,pwon);
+			b = move(letter7,'7',ox,pwon,b);
 		else if(num.value == 8)
-			move(letter8,'8',ox,pwon);
+			b = move(letter8,'8',ox,pwon,b);
 		else if(num.value == 9)
-			move(letter9,'9',ox,pwon);
+			b = move(letter9,'9',ox,pwon,b);
 		else{
 			alert("Number must be between 1 and 9.");
 			b = false;
@@ -215,23 +216,23 @@ btn.addEventListener('click', function(){
 	else if(player == 2){
 		let ox = 'X',pwon = "PLAYER 2 WON!";
 		if(num.value == 1)
-			move(letter1,'1',ox,pwon);
+			b = move(letter1,'1',ox,pwon,b);
 		else if(num.value == 2)
-			move(letter2,'2',ox,pwon);
+			b = move(letter2,'2',ox,pwon,b);
 		else if(num.value == 3)
-			move(letter3,'3',ox,pwon);
+			b = move(letter3,'3',ox,pwon,b);
 		else if(num.value == 4)
-			move(letter4,'4',ox,pwon);
+			b = move(letter4,'4',ox,pwon,b);
 		else if(num.value == 5)
-			move(letter5,'5',ox,pwon);
+			b = move(letter5,'5',ox,pwon,b);
 		else if(num.value == 6)
-			move(letter6,'6',ox,pwon);
+			b = move(letter6,'6',ox,pwon,b);
 		else if(num.value == 7)
-			move(letter7,'7',ox,pwon);
+			b = move(letter7,'7',ox,pwon,b);
 		else if(num.value == 8)
-			move(letter8,'8',ox,pwon);
+			b = move(letter8,'8',ox,pwon,b);
 		else if(num.value == 9)
-			move(letter9,'9',ox,pwon);
+			b = move(letter9,'9',ox,pwon,b);
 		else{
 			alert("Number must be between 1 and 9.");
 			b = false;
