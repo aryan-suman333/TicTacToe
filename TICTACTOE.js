@@ -209,7 +209,9 @@ btn.addEventListener('click', function(){
  		}
 		if(moves == 9){
 			audio2.play();
-			document.getElementById("p1").innerHTML = "GAME DRAW!";
+			if(document.getElementById("p1").innerHTML != pwon){
+				document.getElementById("p1").innerHTML = "GAME DRAW!";
+			}
 			playagain();
 		}
 	}
